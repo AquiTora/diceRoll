@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Warhammer roll</title>
+        <link rel="icon" type="image/x-icon" href="/roll/img/favIco.ico">         
+        <link rel="stylesheet" href="wahaRoll.css"> 
+        <meta name="keywodrs" content="бросание кубов онлайн, DnD, НРПГ, d4, d6, d10, d12, d20, d100, бросание, кубы">
+        <meta name="description" content="Бесплатное бросание кубов всех видов">
+        <meta name="author" content="Ivan Ksel"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    </head>    
+    <body>
+        <h1>Let's roll!</h1>
+        <nav class="menu">
+        <ul class="menuList">
+            <li class="baseList">
+                <a href="" class="menuLink">Фэнтэзи</a>
+                <ul class="sub-menuList">
+                    <li>
+                        <a href="../../roll.html" class="sub-menuLink">DnD</a>
+                    </li>
+                    <li>
+                        <a href="../witcher/witcherRoll.html" class="sub-menuLink">Ведьмак</a>
+                    </li>
+                    <li>
+                        <a href="../warhammerFB/wahaRoll.html" class="sub-menuLink">Warhammer FB</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="baseList">
+                <a href="" class="menuLink">Киберпанк</a>
+                <ul class="sub-menuList">
+                    <li>
+                        <a href="../../Cyberpunk/Deus Ex/DeusRoll.html" class="sub-menuLink">Deus Ex</a>
+                    </li>
+                    <li>
+                        <a href="../../Cyberpunk/Cyberpunk2077/punkRoll.html" class="sub-menuLink">Cyberpunk 2077</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="baseList">
+                <a href="" class="menuLink">Фантастика</a>
+                <ul class="sub-menuList">
+                    <li>
+                        <a href="../../fantastic/wahaRoll40k/wahaRoll40k.html" class="sub-menuLink">Warhammer 40k</a>
+                    </li>
+                </ul>
+            </li>            
+        </ul>
+        </nav>
+        <br>
+        <!--Поле для настройки броска-->
+        <fieldset id="settingsField">
+            <legend style="font-size:25px;font-weight:bold;">Настройка броска</legend>
+            <label for="facets">Количество граней</label>
+            <select id="facets" name="facets" style="margin-top:25px">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
+                <option value="100">d100</option>
+            </select>
+            <fieldset id="formField" style="width:190px;float:right;">
+                <legend style="font-size:25px;font-weight:bold;">Формула</legend>
+                <div id="form" type="text">4d1 + 0</div>   
+            </fieldset><br><br>
+            <label for="quantity">Количество кубов</label>
+            <input id="number" type="number" name="quantity" value="1" min="1" max="99"><br><br>
+            <label for="modifier">Модификатор</label>
+            <select id="modifier" name="modifier">
+                <option value="+">+</option>
+                <option value="-">-</option>                
+            </select>
+            <input id="numMod" for="modifier" type="number" value="0" min="0" max="99">          
+            <button id="resetBtn">RESET</button>
+            <button id="rollBtn">ROLL</button>
+        </fieldset>
+        
+        <div id="upTotal">
+            <div id="total"></div>
+        </div>
+
+        <fieldset id="resultField">
+            <legend style="font-size:25px;font-weight:bold;">Список результатов</legend>            
+            <div id="result"></div>  
+            <div id="rollResult" type="text"></div>
+        </fieldset>
+
+        <a href="wahaRollEng.html"><img id="imgEngBtn" src="../../img/ingBtn.png"></a>
+
+        <script src="../../roll.js"></script>
+    </body>
+</html>
